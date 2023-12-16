@@ -244,6 +244,7 @@ class Score:
         screen.blit(self.image, self.rect)
 
 
+
 def main():
     pg.display.set_caption("真！こうかとん無双")
     screen = pg.display.set_mode((WIDTH, HEIGHT))
@@ -255,6 +256,7 @@ def main():
     beams = pg.sprite.Group()
     exps = pg.sprite.Group()
     emys = pg.sprite.Group()
+
 
     tmr = 0
     clock = pg.time.Clock()
@@ -269,6 +271,7 @@ def main():
 
         if tmr%200 == 0:  # 200フレームに1回，敵機を出現させる
             emys.add(Enemy())
+        
 
         for emy in emys:
             if emy.state == "stop" and tmr%emy.interval == 0:
